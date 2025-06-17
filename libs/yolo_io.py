@@ -96,7 +96,8 @@ class YoloReader:
 
         # print (file_path, self.class_list_path)
 
-        classes_file = open(self.class_list_path, 'r')
+        # classes_file = open(self.class_list_path, 'r')
+        classes_file = open(self.class_list_path, 'r', encoding=ENCODE_METHOD)
         self.classes = classes_file.read().strip('\n').split('\n')
 
         # print (self.classes)
