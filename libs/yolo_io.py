@@ -55,12 +55,14 @@ class YOLOWriter:
             out_file = open(
             self.filename + TXT_EXT, 'w', encoding=ENCODE_METHOD)
             classes_file = os.path.join(os.path.dirname(os.path.abspath(self.filename)), "classes.txt")
-            out_class_file = open(classes_file, 'w')
+            # out_class_file = open(classes_file, 'w')
+            out_class_file = open(classes_file, 'w', encoding=ENCODE_METHOD)
 
         else:
             out_file = codecs.open(target_file, 'w', encoding=ENCODE_METHOD)
             classes_file = os.path.join(os.path.dirname(os.path.abspath(target_file)), "classes.txt")
-            out_class_file = open(classes_file, 'w')
+            # out_class_file = open(classes_file, 'w')
+            out_class_file = open(classes_file, 'w', encoding=ENCODE_METHOD)
 
 
         for box in self.box_list:
